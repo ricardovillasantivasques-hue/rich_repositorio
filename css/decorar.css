@@ -1,0 +1,13 @@
+body {color: #240263;}
+body {font-size: 20px;}
+.centrado{text-align: center;}
+h1 {font-size: 50px;}
+.subrrallado{  text-decoration: underline;}
+.centrado { text-decoration: underline;}
+body {background-color: lightblue;}
+
+img {
+  width: 300px;
+  height: auto;
+  text-align: center;
+}
