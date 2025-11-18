@@ -1,24 +1,80 @@
-body {color: #240263;
-background-color: lightblue;
-font-size: 20px;
-padding: 0%;
-margin: 0%}
+/* ======================= */
+/*        ESTILOS BASE      */
+/* ======================= */
 
-.centrado{text-align: center;
-text-decoration: underline;}
-h1 {font-size: 50px;}
+body {
+  color: #240263;
+  background-color: lightblue;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
 
-.subrrallado{  text-decoration: underline;}
+.centrado {
+  text-align: center;
+  text-decoration: underline;
+}
 
-img {
+h1 {
+  font-size: 50px;
+}
+
+.subrrallado {
+  text-decoration: underline;
+}
+
+/* Imagenes grandes del contenido */
+.contenido-img {
   width: 300px;
   height: auto;
-  text-align: center;
+  display: block;
+  margin: auto;
 }
 
 
-header{background-color: yellow;
-border: 1px solid transparent;}
+
+header {
+  background-color: yellow;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  flex-wrap: wrap;          
+  text-align: center;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+.titulo {
+  flex: 1;
+  font-size: 40px;
+  color: #240263;
+  text-decoration: underline;
+}
+
+
+.redes-header {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.redes-header img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 5px;
+  transition: transform 0.3s;
+}
+
+.redes-header img:hover {
+  transform: scale(1.2);
+}
 
 section {
   background-color: rgba(255, 255, 255, 0.8);
@@ -29,65 +85,99 @@ section {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-  background-color: #240263;
-  color: white;
-  padding: 15px;
-  font-size: 18px;
-}
-
 .footer-redes {
   background-color: #240263;
   color: white;
-  text-align: center;
   padding: 20px;
   border-top: 5px solid yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;         
+  text-align: center;
 }
 
-.footer-redes h3 {
-  margin-bottom: 10px;
-  text-decoration: underline;
+
+.footer-mapa iframe {
+  border-radius: 10px;
 }
+
+.footer-info {
+  max-width: 250px;
+}
+
+.footer-info h3 {
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
 
 .redes {
-  margin-bottom: 15px;
-}
-
-.redes a {
-  display: inline-block;
-  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .redes img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  transition: transform 0.3s ease, background-color 0.3s ease;
   background-color: white;
   padding: 5px;
+  transition: transform 0.3s ease;
 }
 
 .redes img:hover {
   transform: scale(1.2);
-  
 }
 
-/* Botón flotante de WhatsApp */
 .btn-whatsapp {
-  position: fixed;          /* Hace que el ícono quede fijo en pantalla */
-  bottom: 20px;             /* Distancia desde abajo */
-  right: 20px;              /* Distancia desde la derecha */
-  z-index: 100;             /* Lo mantiene encima de otros elementos */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
 }
 
 .btn-whatsapp img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
 }
 
 .btn-whatsapp img:hover {
-  transform: scale(1.1);    /* Efecto al pasar el mouse */
+  transform: scale(1.1);
+}
+
+
+
+@media (max-width: 600px) {
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .titulo {
+    font-size: 30px;
+  }
+
+  .redes-header img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .contenido-img {
+    width: 220px;
+  }
+
+  section {
+    width: 90%;
+  }
+
+  .footer-info {
+    font-size: 18px;
+  }
 }
