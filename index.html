@@ -3,17 +3,24 @@
 <head>
   <meta charset="utf-8">
   <title>Ravioles al disco</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/decorar.css">
-</head>
 
-<!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/5491140381522" class="btn-whatsapp" target="_blank">
-  <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
-</a>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/decorar.css">
+
+  <script src="./javascrip/javascrip.js"></script>
+  <script>
+    alert("bienvenido a una pagina insana");
+  </script>
+</head>
 
 <body>
 
+  <!-- BOTÓN WHATSAPP -->
+  <a href="https://wa.me/5491140381522" class="btn-whatsapp" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+  </a>
+
+  <!-- HEADER -->
   <header class="header">
     <div class="logo">
       <img class="contenido-img" src="./imagenes/logo.png" alt="logo ravioles">
@@ -37,54 +44,25 @@
     </div>
   </header>
 
+  <!-- LISTA DE RECETAS -->
   <h2 class="subrrallado">Otras recetas similares 🍽️</h2>
-
   <ul>
     <li><a href="https://cookpad.com/ar/buscar/sorrentinos" target="_blank">Sorrentinos caseros</a></li>
     <li><a href="https://www.paulinacocina.net/como-hacer-fideos-caseros/21821" target="_blank">Tallarines caseros</a></li>
     <li><a href="https://www.recetasdesbieta.com/lasagna-original/" target="_blank">Lasaña tradicional italiana</a></li>
     <li><a href="https://cookpad.com/ar/recetas/664364" target="_blank">Canelones de espinaca y ricota</a></li>
   </ul>
-  <section class="card-container">
-    <div class="card" style="width: 18rem;">
-  <img src="./imagenes/sorre.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Sorrentinos caseros</h5>
-    <p class="card-text">Los sorrentinos son una pasta rellena típica de la gastronomía argentina</p>
-    <a href="https://cookpad.com/ar/buscar/sorrentinos" target="_blank" class="btn btn-primary">ver mas</a>
-  </div>
-</div>
-<br>
-<div class="card" style="width: 18rem;">
-  <img src="./imagenes/fideos.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Tallarines caseros</h5>
-    <p class="card-text">Los fideos caseros son una pasta hecha a mano con ingredientes simples: harina, huevos y, a veces, un toque de sal o agua.</p>
-    <a href="https://www.paulinacocina.net/como-hacer-fideos-caseros/21821" target="_blank" class="btn btn-primary">ver mas</a>
-  </div>
-</div>
-<br>
-<div class="card" style="width: 18rem;">
-  <img src="./imagenes/lasagna.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">lasaña</h5>
-    <p class="card-text">La lasaña es un plato de pasta compuesto por capas superpuestas de láminas de masa intercaladas con distintos rellenos</p>
-    <a href="https://www.recetasdesbieta.com/lasagna-original/" target="_blank" class="btn btn-primary">ver mas</a>
-  </div>
-</div>
-<br>
-  </section>
 
-  <main>
-    <section>
-      <h2 class="centrado">Video de la receta</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/RYe8bAjlgfQ?si=KOWrjC62ZlpccAbk"
-        title="Preparación de ravioles caseros al disco" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
+  <!--botn de modo oscuro-->
+  <<button onclick="activarModoInclusivo()">Modo inclusivo</button>
 
-    <section>
+
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="layout-container">
+
+    <!-- INGREDIENTES -->
+    <section class="section-1 layout-izq">
       <h2 class="subrrallado">Ingredientes para los ravioles</h2>
       <ul>
         <li>400 g de harina</li>
@@ -110,8 +88,10 @@
       </ul>
     </section>
 
-    <section>
+    <!-- PASOS -->
+    <section class="section-2 layout-izq">
       <h2 class="subrrallado">Pasos para la preparación</h2>
+
       <ol>
         <li><strong>Preparación de la masa:</strong>
           <ol>
@@ -151,29 +131,89 @@
       </ol>
     </section>
 
-    <section>
-      <h2 class="centrado">¿De dónde son los ravioles?</h2>
+    <!-- SECCIÓN DERECHA -->
+    <section class="layout-der">
+      <h2 class="subrrallado" >¿De dónde son los ravioles?</h2>
       <aside>
-        <img class="contenido-img" src="https://img-global.cpcdn.com/recipes/44a33dda65104c3e/240x320cq80/photo.jpg"
-          alt="Ravioles al disco">
-        <p>Los ravioles tienen su origen en Italia, especialmente en el norte, donde surgieron como una pasta rellena
-          tradicional.  
-          Sin embargo, los ravioles al disco son una adaptación argentina, combinando la receta italiana con una forma
-          de cocción típica del campo: el disco de arado.</p>
+        <img class="contenido-img" src="https://img-global.cpcdn.com/recipes/44a33dda65104c3e/240x320cq80/photo.jpg" alt="Ravioles al disco">
+        <p>Los ravioles tienen su origen en Italia, especialmente en el norte, donde surgieron como una pasta rellena tradicional.  
+          Sin embargo, los ravioles al disco son una adaptación argentina, combinando la receta italiana con una forma de cocción típica del campo: el disco de arado.</p>
       </aside>
+    </section>
+
+  </div>
+
+  <!-- CARDS DE RECETAS -->
+  <section class="card-container">
+    <div class="row justify-content-center g-3">
+
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="card">
+          <img src="./imagenes/sorre.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Sorrentinos caseros</h5>
+            <p class="card-text">Los sorrentinos son una pasta rellena típica de la gastronomía argentina</p>
+            <a href="https://cookpad.com/ar/buscar/sorrentinos" target="_blank" class="btn btn-primary">ver mas</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="card">
+          <img src="./imagenes/fideos.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Tallarines caseros</h5>
+            <p class="card-text">Los fideos caseros son una pasta hecha a mano con ingredientes simples: harina, huevos y, a veces, un toque de sal o agua.</p>
+            <a href="https://www.paulinacocina.net/como-hacer-fideos-caseros/21821" target="_blank" class="btn btn-primary">ver mas</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="card">
+          <img src="./imagenes/lasagna.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">lasaña</h5>
+            <p class="card-text">La lasaña es un plato de pasta compuesto por capas superpuestas de láminas de masa intercaladas con distintos rellenos</p>
+            <a href="https://www.recetasdesbieta.com/lasagna-original/" target="_blank" class="btn btn-primary">ver mas</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="card">
+          <img src="./imagenes/canelones.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Canelones de espinaca y ricota</h5>
+            <p class="card-text">Los canelones de espinaca y ricota son un plato clásico de la cocina italiana elaborado con masa de pasta rellena de una mezcla suave de espinaca picada y queso ricota</p>
+            <a href="https://cookpad.com/ar/recetas/664364" target="_blank" class="btn btn-primary">ver mas</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <main>
+    <section>
+      <h2 class="centrado">Video de la receta</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/RYe8bAjlgfQ?si=KOWrjC62ZlpccAbk"
+        title="Preparación de ravioles caseros al disco" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer-redes">
 
-    <!-- MAPA DEL BARRIO -->
     <div class="footer-mapa">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3816.371837024479!2d-58.76523756955863!3d-34.55186158363632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1ses-419!2sar!4v1763428109969!5m2!1ses-419!2sar"
+      <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3816.371837024479!2d-58.76523756955863!3d-34.55186158363632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1ses-419!2sar!4v1763428109969!5m2!1ses-419!2sar"
         width="300" height="250" style="border:0;" allowfullscreen loading="lazy">
       </iframe>
     </div>
-    <!-- REDES SOCIALES -->
+
     <div class="redes">
       <a href="https://www.facebook.com/" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook">
@@ -188,14 +228,16 @@
         <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
       </a>
     </div>
-<!-- INFO DESARROLLADOR -->
-    <div class="footer-info">
-      <h3>Información del desarrollador 🤓</h3>
-      <p><strong>Nombre:</strong> Ricardo Villasanti</p>
-      <p><strong>Edad:</strong> 17 años</p>
-      <p><strong>Email:</strong> ricardovillasantivasques@gmail.com</p>
-    </div>
+
+    <button class="btn-info-creador" onclick="mostrarInfoCreador()">
+      Información del creador
+    </button>
+
+
   </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
+

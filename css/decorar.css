@@ -1,33 +1,60 @@
+/* ---------------------------
+   ESTILO GENERAL
+   --------------------------- */
+
 body {
   color: #240263;
-  background-color: lightblue;
+  background-image: url("./../imagenes/fondo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   font-size: 20px;
   padding: 0;
   margin: 0;
+
+  /* Fondo más legible */
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
 }
 
+h1, h2 {
+  color: #240263;
+}
+
+/* Título principal */
+.titulo {
+  font-size: 45px;
+  font-weight: bold;
+  color: #240263;
+}
+
+/* Subtítulos */
+.subrrallado {
+  text-decoration: underline;
+  color: #1a004b;
+}
+
+/* Centrado */
 .centrado {
   text-align: center;
   text-decoration: underline;
 }
 
-h1 {
-  font-size: 50px;
-}
-
-.subrrallado {
-  text-decoration: underline;
-}
-
+/* Imagen principal */
 .contenido-img {
-  width: 300px;
+  width: 280px;
   height: auto;
-  display: block;
-  margin: auto;
+  border-radius: 10px;
 }
+
+
+/* ---------------------------
+   HEADER
+   --------------------------- */
 
 header {
-  background-color: yellow;
+  background-color: rgba(255, 255, 0, 0.85);
   border: 1px solid transparent;
   display: flex;
   justify-content: space-between;
@@ -35,20 +62,14 @@ header {
   padding: 15px 20px;
   flex-wrap: wrap;
   text-align: center;
+  border-bottom: 4px solid #240263;
 }
 
 .logo img {
   width: 100px;
-  height: auto;
 }
 
-.titulo {
-  flex: 1;
-  font-size: 40px;
-  color: #240263;
-  text-decoration: underline;
-}
-
+/* Redes del header */
 .redes-header {
   display: flex;
   gap: 15px;
@@ -56,75 +77,58 @@ header {
 }
 
 .redes-header img {
-  width: 25px;
-  height: 25px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background-color: white;
   padding: 5px;
-  transition: transform 0.3s;
+  transition: transform 0.2s ease;
 }
 
 .redes-header img:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
 }
 
-section {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 15px;
-  width: 80%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
 
-/* FOOTER */
-.footer-redes {
-  background-color: #240263;
-  color: white;
-  padding: 20px;
-  border-top: 5px solid yellow;
+/* ---------------------------
+   LAYOUT PRINCIPAL
+   --------------------------- */
+
+.layout-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
   flex-wrap: wrap;
-  text-align: center;
-}
-
-.footer-mapa iframe {
-  border-radius: 10px;
-}
-
-.footer-info {
-  max-width: 250px;
-}
-
-.footer-info h3 {
-  text-decoration: underline;
-  margin-bottom: 10px;
-}
-
-/* Redes del footer */
-.redes {
-  display: flex;
-  justify-content: center;
+  width: 90%;
+  margin: 20px auto;
   gap: 20px;
 }
 
-.redes img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: white;
-  padding: 5px;
-  transition: transform 0.3s ease;
+/* Secciones de la izquierda */
+.layout-izq {
+  width: 65%;
 }
 
-.redes img:hover {
-  transform: scale(1.2);
+/* Sección derecha */
+.layout-der {
+  width: 30%;
+  margin-left: auto;
+  align-self: flex-start;
 }
 
-/* Botón de WhatsApp */
+/* Card/Sección general */
+section {
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 20px;
+  border-radius: 15px;
+
+  /* sombra suave para estética */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ---------------------------
+   BOTÓN WHATSAPP
+   --------------------------- */
+
 .btn-whatsapp {
   position: fixed;
   bottom: 20px;
@@ -144,7 +148,64 @@ section {
   transform: scale(1.1);
 }
 
-/* Responsive */
+
+
+/* ---------------------------
+   CARDS (Bootstrap)
+   --------------------------- */
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+
+/* ---------------------------
+   FOOTER
+   --------------------------- */
+
+.footer-redes {
+  background-color: #240263;
+  color: white;
+  padding: 25px;
+  border-top: 6px solid yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.redes img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 5px;
+  transition: transform 0.2s;
+}
+
+.redes img:hover {
+  transform: scale(1.15);
+}
+
+.footer-info h3 {
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+
+/* ---------------------------
+   RESPONSIVE
+   --------------------------- */
+
 @media (max-width: 600px) {
 
   header {
@@ -156,17 +217,16 @@ section {
     font-size: 30px;
   }
 
-  .redes-header img {
-    width: 22px;
-    height: 22px;
-  }
-
   .contenido-img {
     width: 220px;
   }
 
+  /* En celular todo ocupa ancho completo */
+  .layout-izq,
+  .layout-der,
   section {
-    width: 90%;
+    width: 100%;
+    margin-left: 0;
   }
 
   .footer-info {
@@ -174,17 +234,43 @@ section {
   }
 }
 
-
-.card-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;    /* si la pantalla es chica, bajan ordenadas */
-  gap: 20px;          /* separación entre las cards */
-  margin-top: 20px;
+/* Botón simple */
+button {
+  padding: 8px 15px;
+  background-color: #240263;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.card {
-  width: 18rem;
+/* MODO INCLUSIVO */
+.modo-inclusivo {
+  background-color: #111 !important;
+  color: #fff !important;
+}
+
+.modo-inclusivo section {
+  background-color: #222 !important;
+  color: #fff !important;
+}
+
+.modo-inclusivo .subrrallado {
+  color: #ffeb3b !important;      
+  text-decoration-color: #ffeb3b !important;
+}
+.btn-info-creador {
+  padding: 10px 15px;
+  background-color: yellow;
+  color: #240263;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.btn-info-creador:hover {
+  background-color: #e6d200;
 }
 
